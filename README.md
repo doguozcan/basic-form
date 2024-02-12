@@ -21,6 +21,8 @@ This really basic React app demonstrates a simple implementation of form handlin
 
 - Clone the repo:
   `git clone https://github.com/doguozcan/basic-form.git`
+- Navigate to the project directory:
+  `cd basic-form`
 - Install npm packages
   `npm install`
 - Start the application
