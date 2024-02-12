@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export default function Form() {
   const [inputValue, setInputValue] = useState({
     firstName: '',
     lastName: '',
   })
+
+  const firstNameRef = useRef(null)
 
   const [submitted, setSubmitted] = useState(false)
 
@@ -23,6 +25,7 @@ export default function Form() {
       )
       setInputValue({ firstName: '', lastName: '' })
       setSubmitted(false)
+      firstNameRef.current.focus()
     }
   }
 
@@ -36,6 +39,7 @@ export default function Form() {
         value={inputValue.firstName}
         placeholder="First Name"
         onChange={handleChange}
+        ref={firstNameRef}
       ></input>
       {submitted && !inputValue.firstName ? (
         <p className="text-red-500">Please enter your first name</p>
