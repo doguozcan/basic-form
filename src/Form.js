@@ -29,7 +29,8 @@ export default function Form() {
     }
   }
 
-  const inputStyle = 'border border-2 rounded-md p-2 shadow-sm text-center'
+  const inputStyle =
+    'border border-2 rounded-md p-2 shadow-sm text-center mx-auto w-full max-w-md'
 
   return (
     <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
